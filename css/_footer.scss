@@ -10,3 +10,9 @@
 .footer__text {
     @include flexCenter(row, space-between, flex-start);
 }
+
+@media screen and (max-width: 400px) {
+    .footer {
+        margin: 5px 10px;
+    }
+}
