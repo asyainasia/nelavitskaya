@@ -34,3 +34,19 @@
 		transition: 0.5s;
 	}
 }
+
+@media screen and (max-width: 400px) {
+     #contact {
+	     marquee {
+       		 margin-left: 20px;
+    		}
+	}
+	#link {
+		 marquee {
+       		 margin-left: 20px;
+    		}
+	}
+	.icon-wrapper__icon { 
+		    padding-right: 20px;
+	}
+}
