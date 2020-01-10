@@ -1,0 +1,12 @@
+.footer {
+    height: 170px;
+    margin: 5px 100px;
+    span {
+        font-family: $textFont;
+        color: $mediumColor; 
+        font-size: 15px; 
+    }
+}
+.footer__text {
+    @include flexCenter(row, space-between, flex-start);
+}

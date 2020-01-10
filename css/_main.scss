@@ -1,0 +1,47 @@
+.main {
+	@include flexCenter(column, center, center);
+
+	height: 100%;
+	background-color: $lightColor;
+}
+.main__img {
+	width: 269px;
+	position: relative;
+	filter: alpha(Opacity=70); /* Полупрозрачность для IE */
+    opacity: 0.7; /* Полупрозрачность для других браузеров */ 
+	/*filter: grayscale(100%); /* чб */
+	margin-left: 45%;
+	&:hover { 
+		filter: alpha(Opacity=100); 
+		opacity: 1;
+		transition: 0.5s;
+	}
+}
+.main__title {
+	color: $darkColor;
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	font-family: $titleFont;
+	font-size: 3em;
+	display: block;
+}
+.main__subtitle {
+	color: $mediumColor;
+    position: absolute;
+	top: 60%;
+	left: 15%;
+	font-size: 1em;
+	padding-top: 10px;
+}
+
+@media screen and (max-width: 800px), screen and (max-height: 700px) {	
+	.main__subtitle {
+		top: 65%;
+	}
+}
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
+	.main__subtitle {
+		top: 75%;
+	}
+}

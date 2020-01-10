@@ -1,0 +1,16 @@
+// colors 
+$lightColor: #FFF; 
+$mediumColor: gray;
+$darkColor: #010101;
+$cursorColor: rgb(241, 92, 92);
+$textColor: #747272;
+
+$titleFont: 'Montserrat', sans-serif;
+$textFont: 'Raleway', sans-serif;
+
+@mixin flexCenter($direction, $justify, $align) {
+    display: flex;
+	align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}

@@ -1,0 +1,68 @@
+.header {
+    @include flexCenter(row, space-around, center);
+    
+	position: fixed;
+	background-color: transparent;
+    height: 100px;
+    width: 100%;
+}
+.header__label {
+    @include flexCenter(row, center, center);
+
+	position: fixed;
+	top: 0+25px;
+	left: 10%;
+	background-color: $darkColor;
+	color: $lightColor;
+	filter: alpha(Opacity=20);
+    opacity: 0.2;
+    width: 100px;
+    height: 50px;
+    transform: rotate(-90deg);
+}
+.header__menu {
+    @include flexCenter(row, flex-end, center);
+    
+	list-style: none;
+	width: 100vw;
+    a {
+        position: relative;
+        text-decoration: none;
+        color: $darkColor;
+        cursor: pointer;
+        &:after {
+            display: block;
+            position: absolute;
+            left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+            width: 0;/*задаём длинну линии до наведения курсора*/
+            height: 2px; /*задаём ширину линии*/
+            background-color: $darkColor; /*задаём цвет линии*/
+            content: "";
+            transition: width 0.3s ease-out; /*задаём время анимации*/
+        }
+        &:hover:after,
+        &:focus:after {
+            width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+        }
+    }
+    li {
+        display: inline-block;
+        white-space: nowrap; /*запретить перенос строки внутри пунктов меню*/
+        padding-right: 100px;
+    }
+}
+
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
+    .header__label {
+        display: none;
+    }
+    .header {
+        @include flexCenter(row, center, center);
+    }
+    .header__menu {
+        @include flexCenter(row, center, center);
+        li {
+            padding: 0 50px;
+        }
+    }
+}

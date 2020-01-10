@@ -1,0 +1,22 @@
+#about {
+    @include flexCenter(row, flex-start, flex-start);
+
+    marquee {
+        width: 100px;
+        margin-left: 100px;
+    }
+    padding: 200px 0;
+}
+.block__title {
+   font-family: $titleFont;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+.block__text {
+    font-family: $textFont;
+    line-height: 140%;
+    color: $mediumColor;
+    width: 780px;
+    padding-left: 100px;
+    padding-right: 50px;
+}

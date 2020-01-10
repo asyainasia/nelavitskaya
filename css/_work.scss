@@ -1,0 +1,47 @@
+#work {
+    @extend #about;
+    marquee {
+        margin-left: 20px;
+    }
+    @include flexCenter(column, flex-start, flex-start);
+    padding: 0 100px;
+    .block__text {
+        // color: $darkColor;
+    }
+    .row {
+        @include flexCenter(row, flex-start, flex-start);
+        p {
+            width: 50%;
+            padding: 20px;
+        }
+    }
+}
+.block__text_lower {
+    margin-top: 100px;
+}
+a {
+    color: $mediumColor;
+} 
+strong {
+    color: $darkColor;
+}
+
+@media screen and (max-width: 1024px), screen and (max-height: 1000px) {
+    #work {
+        padding: 0 50px;
+    }	
+}
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
+    #work {
+        .row {
+            @include flexCenter(column, flex-start, flex-start);
+            p {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+    .block__text_lower {
+        margin-top: 0px;
+    }
+}

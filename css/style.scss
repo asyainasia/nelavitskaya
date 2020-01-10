@@ -1,0 +1,39 @@
+@import './variables';
+@import './header';
+@import './main';
+@import './about';
+@import './work';
+@import './contact';
+@import './footer';
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: $textFont;
+}
+#cursor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-color: $cursorColor;
+	box-sizing: border-box;
+	transition: 0.1s;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+@media screen and (max-width: 1024px), screen and (max-height: 1000px) {	
+}
+@media screen and (max-width: 800px), screen and (max-height: 700px) {	
+	#cursor {
+		display: none;
+	}
+}
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
+}
